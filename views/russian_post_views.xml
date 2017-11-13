@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+    
+    
+           <record model="ir.ui.view" id="russian_post_settings_form_view">
+                <field name="name">russian.post.settings.form</field>
+                <field name="model">russian.post.settings</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Russian Post">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>                    
+                        <group>
+                        <field string="Form​ ​ F.116" name="delivery_method_ids" widget="many2many_checkboxes"/>
+                        </group>
+                    </form>
+                </field>
+            </record>
+        <record id="action_russian_post_settings_form_view" model="ir.actions.act_window">
+            <field name="name">Russian Post Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">russian.post.settings</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="russian_post_settings_form_view"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+    
+    		<menuitem id="rusian_post_menu" name="Russian Post" parent="base.menu_custom" action="action_russian_post_settings_form_view"/>
+    
+    
+    </data>
+</openerp>
