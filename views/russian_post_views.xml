@@ -13,10 +13,11 @@
                     <header>
                         <button string="Apply" type="object" name="execute" class="oe_highlight"/>
                         <button string="Cancel" type="object" name="cancel" class="oe_link"/>
-                    </header>                    
+                    </header>
                         <group>
                         <field string="Form​ ​ F.116" name="delivery_method_ids" widget="many2many_checkboxes"/>
                         </group>
+                       
                     </form>
                 </field>
             </record>

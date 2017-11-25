@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+    <record id="f7" model="service.delivery.form">
+        <field name="name">F7</field>    
+    </record>
+    <record id="f116" model="service.delivery.form">
+        <field name="name">F.116</field>    
+    </record>
+    <record id="f112" model="service.delivery.form">
+        <field name="name">F.112</field>    
+    </record>
+    <record id="pimpay" model="service.delivery.form">
+        <field name="name">PimPay</field>    
+    </record>
+    <record id="f107" model="service.delivery.form">
+        <field name="name">F.107</field>    
+    </record>
+    <record id="f112ek" model="service.delivery.form">
+        <field name="name">F.112EK</field>    
+    </record>
+    <record id="address_label_f7" model="service.delivery.form">
+        <field name="name">Address label F7</field>    
+    </record>
+    <record id="partial_dispatches_f103" model="service.delivery.form">
+        <field name="name">Partial dispatches F103</field>    
+    </record>
+    <record id="cn23" model="service.delivery.form">
+        <field name="name">CN23</field>    
+    </record>
+    <record id="cp-71" model="service.delivery.form">
+        <field name="name">CP-71</field>    
+    </record>
+    <record id="c6,dl,c5,c4,b4" model="service.delivery.form">
+        <field name="name">C6,DL,C5,C4,B4</field>    
+    </record>
+    <record id="f113en" model="service.delivery.form">
+        <field name="name">F.113en</field>    
+    </record>
+    <record id="application_for_the_search_for_internal_mail" model="service.delivery.form">
+        <field name="name">Application for the search for internal mail</field>    
+    </record>
+    <record id="f117_+_f113en" model="service.delivery.form">
+        <field name="name">F.117 + F.113en</field>    
+    </record>
+    <record id="application_for_the_search_for_international_mail" model="service.delivery.form">
+        <field name="name">Application for the search for international mail</field>    
+    </record>
+
+    
+    
+    </data>
+</openerp>
