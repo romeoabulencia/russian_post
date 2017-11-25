@@ -44,14 +44,15 @@ class generate_delivery_form(models.TransientModel):
 
     @api.v7
     def print_report(self, cr, uid, ids, context=None):
-        datas = {
-             'ids': context.get('active_ids', []),
-             'model': 'hr.contribution.register',
-             'form': self.read(cr, uid, ids, context=context)[0]
-        }
+#         datas = {
+#              'ids': context.get('active_ids', []),
+#              'model': 'hr.contribution.register',
+#              'form': self.read(cr, uid, ids, context=context)[0]
+#         }
 #         return self.pool['report'].get_action(
 #             cr, uid, [], 'hr_payroll.report_contributionregister', data=datas, context=context
-#         )    
+#         )
+        return
     
 class stock_picking(models.Model):
     _inherit="stock.picking"
