@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-    
-    <record id="f7" model="service.delivery.form">
-        <field name="name">F7</field>    
+        <record id="f.7" model="service.delivery.form">
+        <field name="name">F.7</field>    
     </record>
-    <record id="f116" model="service.delivery.form">
-        <field name="name">F.116</field>    
+    <record id="f.113_f.117" model="service.delivery.form">
+        <field name="name">F.113/F.117</field>    
     </record>
-    <record id="f112" model="service.delivery.form">
-        <field name="name">F.112</field>    
+    <record id="cash_on_delivery_f.113" model="service.delivery.form">
+        <field name="name">Cash on Delivery F.113</field>    
     </record>
-    <record id="pimpay" model="service.delivery.form">
-        <field name="name">PimPay</field>    
+    <record id="inventory_.107" model="service.delivery.form">
+        <field name="name">Inventory .107</field>    
     </record>
-    <record id="f107" model="service.delivery.form">
-        <field name="name">F.107</field>    
+    <record id="parcel_f.116" model="service.delivery.form">
+        <field name="name">Parcel F.116</field>    
     </record>
-    <record id="f112ek" model="service.delivery.form">
-        <field name="name">F.112EK</field>    
+    <record id="cn23_customs_declarations" model="service.delivery.form">
+        <field name="name">CN23 Customs Declarations</field>    
+    </record>
+    <record id="partial_dispatches_f.103" model="service.delivery.form">
+        <field name="name">Partial Dispatches F.103</field>    
     </record>
     <record id="address_label_f7" model="service.delivery.form">
         <field name="name">Address label F7</field>    
     </record>
-    <record id="partial_dispatches_f103" model="service.delivery.form">
-        <field name="name">Partial dispatches F103</field>    
+    <record id="ems_form_for_domestic_items" model="service.delivery.form">
+        <field name="name">EMS Form for domestic items</field>    
     </record>
-    <record id="cn23" model="service.delivery.form">
-        <field name="name">CN23</field>    
+    <record id="pimpay" model="service.delivery.form">
+        <field name="name">PimPay</field>    
     </record>
-    <record id="cp-71" model="service.delivery.form">
-        <field name="name">CP-71</field>    
+    <record id="print_addresses" model="service.delivery.form">
+        <field name="name">Print Addresses</field>    
     </record>
-    <record id="c6,dl,c5,c4,b4" model="service.delivery.form">
-        <field name="name">C6,DL,C5,C4,B4</field>    
-    </record>
-    <record id="f113en" model="service.delivery.form">
-        <field name="name">F.113en</field>    
-    </record>
-    <record id="application_for_the_search_for_internal_mail" model="service.delivery.form">
-        <field name="name">Application for the search for internal mail</field>    
-    </record>
-    <record id="f117_+_f113en" model="service.delivery.form">
-        <field name="name">F.117 + F.113en</field>    
-    </record>
-    <record id="application_for_the_search_for_international_mail" model="service.delivery.form">
-        <field name="name">Application for the search for international mail</field>    
-    </record>
+
 
     
     
