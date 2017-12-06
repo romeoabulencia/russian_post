@@ -17,6 +17,9 @@
                         <group>
                         <field string="Form​ ​ F.116" name="delivery_method_ids" widget="many2many_checkboxes"/>
                         </group>
+                        <group>
+                            <field name="access_token" attrs="{'required':[('delivery_method_ids','!=',False)],'invisible':[('delivery_method_ids','=',False)]}"/>
+                        </group>
                        
                     </form>
                 </field>

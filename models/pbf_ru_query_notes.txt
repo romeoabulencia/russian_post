@@ -23,7 +23,7 @@ data['declared_value'] = '1000.00'
 data['COD_amount'] = '1100.00'
 
 params = {}
-params['access_token'] = '811a3e8aa1bf0a7c2d4d2318185cfebe'
+params['access_token'] = '3f2b5fdf85c9aa6be0634048dbce43d7Get'
 params['data'] = json.dumps(data)
 
 params = urllib.urlencode(params)

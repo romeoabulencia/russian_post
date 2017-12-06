@@ -10,6 +10,7 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form>
+                        <separator string="Select a Russian post form to generate"/>
                         <field name="delivery_method"/>
                         <footer>
                             <button name="print_report" string="Print" type="object" class="btn-primary" context="{'delivery_method':delivery_method}"/>
