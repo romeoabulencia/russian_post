@@ -1,0 +1,482 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+
+import urllib
+import json
+
+data = {}
+data['type_blank'] = 'a'
+data['from_name'] = 'Ивана Ивановича'
+data['from_city'] = 'г. Москва'
+data['from_street'] = 'ул. Стахановская'
+data['from_build'] = '999'
+data['from_appartment'] = '99'
+data['from_zip'] = '109428'
+data['whom_surname'] = 'Петрову'
+data['whom_name'] = 'Петру Петровичу'
+data['whom_city'] = 'г. Санкт-Петербург'
+data['whom_street'] = 'ул. Гоголя'
+data['whom_build'] = '888'
+data['whom_appartment'] = '88'
+data['whom_zip'] = '190000'
+data['declared_value'] = '1000.00'
+data['COD_amount'] = '1100.00'
+
+params = {}
+params['access_token'] = '811a3e8aa1bf0a7c2d4d2318185cfebe'
+params['data'] = json.dumps(data)
+
+params = urllib.urlencode(params)
+f = urllib.urlopen("http://pbrf.ru/pdf.F7", params)
+print f.read()
+
+---------------
+Form "Label F.7"
+
+print.F7 - for printing 
+pdf.F7 - for pdf
+
+Options
+
+type_blank - type of the label form 
+- a - departure of the 1st class 
+- b - parcel 
+- p - parcel
+from_surname - surname of the sender
+from_name - name and patronymic of the sender
+from_city - city of residence of the sender
+from_street - street of the sender's residence
+from_build - house and apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom_surname - surname of the recipient
+whom_name - name and patronymic of the recipient
+whom_city - city of residence of the recipient
+whom_street - street of the recipient's residence
+whom_build - house and apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+declared_value - the amount of declared value
+COD_amount - the amount of cash on delivery
+tracking_number - bar-coded postal identifier
+-----------------------
+Form "F.113 / F.117 parcel with cash on delivery"
+
+print.F113F117 - for printing 
+pdf.F113F117 - for pdf
+
+Options
+
+from_surname - surname and name of the sender
+from_patronymic - surname of the sender
+from_city - city of residence of the sender
+from_street - street, house, apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom_surname - name and surname of the recipient
+whom_patronymic - the patronymic of the recipient
+whom_city - city of residence of the recipient
+whom_street - street, house, apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+declared_value_num - the amount of declared value, in figures
+COD_amount_num - the amount of the cash on delivery, in figures
+document - presented document
+document_serial - the series of the document
+document_number - The number of the document presented
+document_day - day and month of issue of the presented document
+document_year - year of issue of the presented document
+document_issued_by - name of the institution that issued the presented document
+----------------------------
+Blank "Postal order F.112ep"
+
+print.F112 - for printing 
+pdf.F112 - for pdf
+
+Options
+
+from_surname - surname of the sender
+from_name - name and patronymic of the sender
+from_birthday - sender's birthday
+from_region - region where the sender lives
+from_city - city where the sender lives
+from_street - street where the sender lives
+from_build - home where the sender lives
+from_appartment - apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom_name - surname, name and patronymic of the recipient
+who_region - region where the recipient lives
+whom_city - city where the recipient lives
+whom_street - street where the recipient lives
+whom_build - home where the recipient lives
+whom_appartment - apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+sum_num - the amount of the postal order, in figures
+inn - TIN
+kor_account - Correspondence account
+current_account - Race / account
+bik - BIC
+bank_name - name of the bank
+document - presented document
+document_serial - the series of the document
+document_number - The number of the document presented
+document_day - day and month of issue of the presented document
+document_year - year of issue of the presented document
+document_issued_by - name of the institution that issued the presented document
+unit_code - department code
+message_part1 - message, 33 characters
+message_part2 - message continuation, 40 characters
+barcode - bar code
+to_phone - Telephone, SMS-notification of transfer to the office
+from_phone - Phone, SMS-notification about payment of postal order
+one - Cash on delivery (we send 'x')
+two - With home delivery (we send 'x')
+three - With notification (we send 'x')
+----------------------------
+F112EK for federal customers of the Russian Post
+
+pdf.F112EK - for pdf
+
+Options
+
+to_zip - the index of the city where the recipient lives
+to_type - the type of client (for example, the federal client)
+to_name - name of the recipient
+to_phone - recipient's phone number
+from_zip - the index of the city where the sender resides
+from_region - region where the sender lives
+from_city - city where the sender lives
+from_surname - surname of the sender
+from_name - name and patronymic of the sender
+from_street - street where the sender lives
+from_build - home where the sender lives
+from_appartment - apartment where the sender lives
+sum_num - the amount of the postal order, in figures
+barcode - bar code
+message - the message or the identifier of the translation
+cod - cash on delivery (0/1)
+-------------------------------
+Form "Cash on delivery F.113 \ en"
+
+pdf.F113 - for pdf
+
+Options
+
+from_surname - surname of the sender
+from_name - name and patronymic of the sender
+from_region - region where the sender lives
+from_city - city where the sender lives
+from_street - street where the sender lives
+from_build - house, apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom_name - surname, name and patronymic of the recipient
+whom_city - city where the recipient lives
+whom_street - street, house, apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+sum_num - the amount of the postal order, in figures
+inn - TIN
+kor_account - Correspondence account
+current_account - Race / account
+bik - BIC
+bank_name - name of the bank
+barcode - bar code
+----------------------------------
+Form "Inventory Ф.107"
+
+print.F107 - for printing 
+pdf.F107 - for pdf
+
+Options
+
+whom is the surname, name and patronymic of the recipient
+whom_country is the country where the recipient lives
+whom_city - city, street, house, apartment where the recipient lives
+investment - what is invested
+object - nested things, a maximum of 9 things
+name - the name of the thing
+count - quantity of things
+price - the total cost of things
+----------------------------------
+Form "Parcel F.116"
+
+print.F116 - for printing 
+pdf.F116 - for pdf
+
+Options
+
+from_surname - surname, name and patronymic of the sender
+from_country is the country in which the sender resides
+from_city - city, street, house, apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom is the surname, name and patronymic of the recipient
+whom_country is the country where the recipient lives
+whom_city - city, street, house, apartment where the recipient lives
+whom_street - street, house, apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+document - presented document
+document_serial - the series of the document
+document_number - The number of the document presented
+document_day - day and month of issue of the presented document
+document_year - year of issue of the presented document
+document_issued_by - name of the institution that issued the presented document
+declared_value - the amount of declared value
+COD_amount - the amount of cash on delivery
+tracking_number - bar-coded postal identifier
+----------------------------------
+Form "CN23 Customs Declaration"
+
+print.CN23 - for printing 
+pdf.CN23 - for pdf
+
+Options
+
+from_surname - surname, name and patronymic of the sender
+from_country - country where the sender lives
+from_city - city where the sender lives
+from_street - street, house, apartment where the sender lives
+from_zip - the index of the city where the sender resides
+whom_surname - surname, name and patronymic of the recipient
+whom_country is the country where the recipient lives
+whom_city - city where the recipient lives
+whom_street - street, house, apartment where the recipient lives
+whom_zip - the index of the city where the recipient lives
+object - a list of items, a maximum of 4 items
+name - the name of the subject
+count is the number of items
+brut - net weight
+price - the total cost of the items
+------------------------------------
+Form of "Partial dispatches F103"
+
+pdf.F103 - for pdf
+
+Options
+
+list_num - Unique number of the list | Max length 6 | Data type NUM
+send_date - Date in the format YYYYMMDD. | | Max length 8 | Data type NUM
+mail_type - Kind of postal items | Length max 2 | Data type NUM
+sendr - sender information | Max length 147 | CHAR data type
+email - the email of the sender | Max length 147 | CHAR data type
+index_from - Index of the OPS, from which the internal dispatch has arrived. Format: IndexFrom = IIIIIIII, where IIIIII is the index of OPS | Max length 6 | Data type NUM
+mail_count - The total number of RPOs in the list of partian mails.y | The length of the max 999999 | Data type NUM
+Recipient details:
+rcpn - name, information about the recipient of the RPO. Rcpn = receiver, where the recipient is a character string | Max length 147 | CHAR data type
+index_to - ZIP code of the postal service object of destination | Max length 6 | Data type NUM
+region_to - State, region of destination | Max length 200 | CHAR data type
+place_to - Location of destination | Max length 200 | CHAR data type
+street_to - Street name | Max length 200 | CHAR data type
+house_to - Building number | Length max 60 | CHAR data type
+area_to - Optional - Location | Max length 200 | CHAR data type
+location_to - Optional - An intra-urban element (quarter, satellite, settlement, microdistrict, territory) | Max length 200 | CHAR data type
+letter_to - Building letter | Length max 2 | CHAR data type
+slash_to - Fraction building | Max length 8 | CHAR data type
+corpus_to - Building shell | Max length 8 | CHAR data type
+building_to - Building structure | Max length 8 | CHAR data type
+room_to - Room number | Max length 6 | CHAR data type
+barcode | Max length 14 | CHAR data type
+tel_address - Recipient's Phone | Length max 15 | Data type NUM
+mail_ctg - Category of mail | Length max 1 | Data type NUM
+mass - Weight of departure | Max length 6 | Data type NUM
+value - The amount of declared value | Max length 14 | Data type NUM
+payment - COD amount | Max length 14 | Data type NUM
+comment - Comment | Max length 200 | CHAR data type
+--------------------------------------
+Form "Address label F7 unified"
+
+https://api.pbrf.ru/pdf.f7 - for pdf
+
+Options
+
+MailType NUM (2)
+MailType = 4; "Package"
+MailType = 3; "Parcel post"
+MailType = 15; "1 class"
+MailCtg NUM (2)
+MailCtg = 0; "Simple"
+MailCtg = 1; "Custom"
+MailCtg = 2; "With declared value"
+MailCtg = 3; "Ordinary"
+MailCtg = 4; "With declared value and cash on delivery"
+MailCtg = 5; "Not determined"
+PostMark NUM (6)
+PostMark = 1; "With a simple notice"
+PostMark = 2; "With registered notification"
+PostMark = 4; "With inventory"
+PostMark = 16; "Heavyweight"
+PostMark = 32; «Oversized»
+PostMark = 0; "Standard"
+PostMark = 2048; "Non-standard"
+SNDR CHAR (60) Information about the sender
+RCPN CHAR (60) Recipient Information
+Mass NUM (6) Weight in grams
+Payment NUM (14) The amount of cash on delivery in kopecks
+Value NUM (14) Sum of declared value in kopecks
+from_phone NUM (10) Sender's mobile phone
+to_phone NUM (10) Recipient's mobile phone
+SMSNoticeS NUM (2) SMSNoticeS = 1 "With SMS notification of receipt of departure to the office"
+SMSNoticeS NUM (2) SMSNoticeS = 2 "With SMS notification of delivery of the item"
+street_from CHAR (200) Street name
+house_from CHAR (60) Building number
+letter_from CHAR (2) Building letters
+slash_from CHAR (8) Fraction of building
+corpus_from CHAR (8) Building shell
+building_from CHAR (8) Building structure
+room_from CHAR (6) Room number
+place_from CHAR (200) Settlement place of destination
+area_from CHAR (200) Optional - Location area
+region_from CHAR (200) Region, region of destination
+index_from CHAR (6) index
+street_to CHAR (200) Street name
+house_to CHAR (60) Building number
+letter_to CHAR (2) Building letters
+slash_to CHAR (8) Fraction building
+corpus_to CHAR (8) Building shell
+building_to CHAR (8) Building structure
+room_to CHAR (6) Room number
+place_to CHAR (200) Settlement place of destination
+area_to CHAR (200) Optional - Location of the place
+region_to CHAR (200) Region, region of destination
+index_to CHAR (6) index
+--------------------------------------
+CP 71 of the Accompanying Address
+
+pdf.CP71 - for pdf
+
+Options
+
+declared_val_numeric - the amount of declared value
+to_surname - name and surname of the recipient
+to_street - address of the sender's residence
+to_zip - the index of the city where the sender resides
+to_country - the index of the country where the sender resides
+from_surname - surname and name of the sender
+from_city - city of residence of the sender
+from_street - address of the sender's residence
+from_zip - the index of the city where the sender resides
+-----------------------------------------
+EMS form for domestic items
+
+https://api.pbrf.ru/pdf.emspost - for pdf
+
+Options
+
+SNDR CHAR (60) Information about the sender
+RCPN CHAR (60) Recipient Information
+from_phone NUM (10) Sender's mobile phone
+to_phone NUM (10) Recipient's mobile phone
+street_from CHAR (200) Street name
+house_from CHAR (60) Building number
+place_from CHAR (200) Settlement place of destination
+area_from CHAR (200) Optional - Location area
+index_from CHAR (6) index
+region_from CHAR (200) Region, region of destination
+street_to CHAR (200) Street name
+house_to CHAR (60) Building number
+place_to CHAR (200) Settlement place of destination
+area_to CHAR (200) Optional - Location of the place
+index_to CHAR (6) index
+region_to CHAR (200) Region, region of destination
+SenderName CHAR (200) Description legal. persons
+RecipientName CHAR (200) Description legal. persons
+Description CHAR (200) Description of the contents
+AgreementNo CHAR (200) Contract number
+MailCtg NUM (2)
+- MailCtg = 0; Ordinary 
+- MailCtg = 1; With the declared value 
+- MailCtg = 2; With declared value and cash on delivery
+Payment NUM (14) Cash on delivery amount
+Value NUM (14) The amount of declared value
+------------------------------------------
+Form "PimPay"
+
+http://beta.pbrf.ru/v1/blank/pimpay/ - for pdf
+
+Options
+
+sndr CHAR (60) Information about the sender
+street_from CHAR (200) The transfer fee is paid in cash
+clients - your buyer
+shops - your shopper
+type CHAR (20) Name of the sender's street
+house_from CHAR (60) Sender Building Number
+room_from CHAR (6) Room number of the sender
+place_from CHAR (200) Settlement destination of the sender
+region_from CHAR (200) Scope, region of destination sender
+index_from CHAR (6) sender's index
+sum_num NUM (14) Amount in rubles
+message CHAR (14) Post
+----------------------------------------------
+Print Addresses
+
+pdf.PrintAddress - for pdf
+
+Options
+
+from_name - the name of the sender
+from_adress - sender address
+from_zip - sender's index
+to - recipients in the form of an array array (0 => array ('to_name' => 'recipient name', 'to_address' => 'recipient address', 'to_zip' => 'recipient index')
+count_copy - the number of duplicate addresses of the sender
+---------------------------------------------------
+
+'from_zip': 9
+ 'from_surname': 8
+ 'from_city': 8
+ 'whom_city': 7
+ 'from_street': 7
+ 'whom_street': 6
+ 'whom_zip': 6
+ 'from_name': 5
+ 'sum_num': 4
+ 'barcode': 4
+ 'to_phone': 4
+ 'index_from': 4
+ 'from_build': 4
+ 'document_day': 3
+ 'from_phone': 3
+ 'document_year': 3
+ 'region_to': 3
+ 'whom_surname': 3
+ 'from_region': 3
+ 'house_to': 3
+ 'document_number': 3
+ 'document_serial': 3
+ 'index_to': 3
+ 'area_to': 3
+ 'house_from': 3
+ 'place_from': 3
+ 'document_issued_by': 3
+ 'region_from': 3
+ 'document': 3
+ 'street_from': 3
+ 'place_to': 3
+ 'street_to': 3
+ 'whom_country': 3
+ 'whom_name': 3
+ 'room_from': 2
+ 'RCPN': 2
+ 'whom_build': 2
+ 'bik': 2
+ 'Value': 2
+ 'name': 2
+ 'current_account': 2
+ 'price': 2
+ 'object': 2
+ 'to_zip': 2
+ 'MailCtg': 2
+ 'message': 2
+ 'area_from': 2
+ 'COD_amount': 2
+ 'building_to': 2
+ 'room_to': 2
+ 'whom': 2
+ 'SNDR': 2
+ 'bank_name': 2
+ 'letter_to': 2
+ 'count': 2
+ 'tracking_number': 2
+ 'from_appartment': 2
+ 'corpus_to': 2
+ 'declared_value': 2
+ 'inn': 2
+ 'kor_account': 2
+ 'Payment': 2
+ 'slash_to': 2
+ 'from_country': 2
+

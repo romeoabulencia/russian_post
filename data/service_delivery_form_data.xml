@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <record id="f.7" model="service.delivery.form">
+        <record id="f_7" model="service.delivery.form">
         <field name="name">F.7</field>    
         <field name="api_url">http://pbrf.ru/pdf.F7</field>
     </record>
-    <record id="f.113_f.117" model="service.delivery.form">
+    <record id="f_113_f_117" model="service.delivery.form">
         <field name="name">F.113/F.117</field> 
         <field name="api_url">http://pbrf.ru/pdf.F113F117</field>
            
     </record>
-    <record id="postal_order_f.112ep" model="service.delivery.form">
+    <record id="postal_order_f_112ep" model="service.delivery.form">
         <field name="name">Postal order F.112ep</field>   
         <field name="api_url">http://pbrf.ru/pdf.F112</field>
          
     </record>
-    <record id="f.112ek" model="service.delivery.form">
+    <record id="f_112ek" model="service.delivery.form">
         <field name="name">F112EK for federal customers of the Russian Post</field>
         <field name="api_url">http://pbrf.ru/pdf.F112EK</field>
     </record>
-    <record id="cod_f.113" model="service.delivery.form">
+    <record id="cod_f_113" model="service.delivery.form">
         <field name="name">Cash on delivery F.113 \ en</field>   
         <field name="api_url">http://pbrf.ru/pdf.F113</field>
  
     </record>
-    <record id="f.107" model="service.delivery.form">
+    <record id="f_107" model="service.delivery.form">
         <field name="name">Inventory F.107</field> 
         <field name="api_url">http://pbrf.ru/pdf.F107</field>
    
     </record>
-    <record id="parcel_f.116" model="service.delivery.form">
+    <record id="parcel_f_116" model="service.delivery.form">
         <field name="name">Parcel F.116</field>    
         <field name="api_url">http://pbrf.ru/pdf.F116</field>
 

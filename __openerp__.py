@@ -3,7 +3,7 @@
 {
     'name': 'Russion Post',
     'version': '1.0',
-    'author': 'Eugene G., Romeo Abulencia',
+    'author':  'Romeo Abulencia',
     'description': '',
     'category': '',
     'depends': ['delivery',],

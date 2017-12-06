@@ -6,4 +6,5 @@ class service_delivery_form(models.Model):
     _name="service.delivery.form"
     
     name = fields.Char('Name')
+    api_url = fields.Char('API Value')
     
